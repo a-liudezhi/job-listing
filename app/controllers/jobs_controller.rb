@@ -6,7 +6,7 @@ def index
 end
 
  def show
-  @job = Job.find(parmas[:id])
+  @job = Job.find(params[:id])
  end
 
  def new
