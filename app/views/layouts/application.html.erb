@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
-    <title>世邦品牌集结服务站</title>
+    <title>世邦招聘服务站</title>
     <%= csrf_meta_tags %>
 
     <%= stylesheet_link_tag    'application', media: 'all', 'data-turbolinks-track': 'reload' %>
@@ -11,7 +11,7 @@
   <body>
 
     <div class="container-fluid">
-             <div class="row">
+             <%= render "common/flashes" %>
                <%= render "common/navbar" %>
                <%= yield %>
              </div>

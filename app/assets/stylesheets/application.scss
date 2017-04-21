@@ -24,15 +24,15 @@
 @import "font-awesome";
 
 $nav-color-gray: #A6A6A6;
-$nav-color-white: #fff;
+$nav-color-white: #343e56;
 $nav-color-black: #A6A6A6;
 $nav-background-black: #323436;
 $nav-a-hover: #353637;
 $banner-color: #fff;
 $btn-color: #fff;
-$btn-background: #49BCB5;
+$btn-background: #50a0d0;
 $btn-background-hover: #00DBE9;
-$banner: url(https://ww2.sinaimg.cn/large/006tNbRwgy1fesfxfoxmgj30im0atwhu.jpg);
+$banner: url(https://ww2.sinaimg.cn/large/006tNbRwgy1feu5lmoa9pj30qo0czn6u.jpg);
 
 
 // navbar
@@ -47,7 +47,7 @@ $banner: url(https://ww2.sinaimg.cn/large/006tNbRwgy1fesfxfoxmgj30im0atwhu.jpg);
   left: 0;
   margin-bottom: 10px;//底部 margin 不撑开距离
   //transition: background-color .6s;
-  background: #49BCB5; /*背景颜色*/
+  background: #7abee8; /*背景颜色*/
   font-size: 30px;
   &.black {
     color: $nav-color-gray;
@@ -184,7 +184,7 @@ section {
   padding-top: 20px;
   padding-bottom: 85px;
   &.odd {
-    background: #F2F2F5;
+    background: #c9e2f2;
   }
 }
 .section-title {
@@ -213,14 +213,14 @@ section {
   margin: 0 -15px 0;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
   color: $banner-color;
   position: relative;
-  height: 770px;
+  height: 850px;
   letter-spacing: 2px;
   // filter: blur(.5px);
   &::before {
     content: "";
     width: 100%;
     height: 100%;
-    background-color: transparentize(#000, .55);
+  // background-color: transparentize(#000, .55);
     position: absolute;
     top: 0;
     left: 0;
@@ -236,14 +236,17 @@ section {
   .title {
     text-align: center;//文字左对齐
     padding: 50px 20px 0;//上50px，左右20px，下0
-    font-size: 70px;
+    font-size: 60px;
     font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
     padding-top: 268px;
   }
+
+
+
   .slogan {
     width: 600px;
-    margin: 44px auto 0;
-    font-size: 44px;
+    margin: 40px auto 0;
+    font-size: 30px;
     line-height: 26px;
     text-align: center;
   }
@@ -251,6 +254,7 @@ section {
     margin-top: 40px;
     margin-bottom: 230px;
     text-align: center;
+    font-size: 30px;
     color: white;
     .b-btn {
       padding: 10px 20px;
@@ -264,20 +268,20 @@ section {
   margin: 50px auto 0;
   text-align: center;
   overflow: hidden;
-  height: 355px;
-  width: 1024px;
+  height: 600px;
+  width: 1054px;
   li {
     display: inline-block;
-    width: 220px;
-    height: 150px;
+    width: 310px;
+    height: 220px;
     margin-left: 10px;
     margin-right: 10px;
     position: relative;
     margin-bottom: 50px;
     overflow: hidden;
     .hjc-img-wrap {
-      width: 220px;
-      height: 150px;
+      width:310px;
+      height: 270px;
       img {
         width: 100%;
         height: auto;
@@ -301,13 +305,7 @@ section {
       transition: opacity .4s ease-in-out;
     }
   }
-  .more {
-    .title {
-      height: 150px;
-      line-height: 130px;
-      font-size: 20px;
-    }
-  }
+
 }
 
 // home-people
@@ -402,16 +400,24 @@ section {
 
 .section-content {
   width: 1000px;
-  padding-top: 60px;
+  padding-top: 50px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.8em;
+
   .title {
     padding: 20px 0 10px;
     color: #333333;
     font-size: 24px;
     font-weight: bold;
+    text-align: center;
   }
+
+  .advantage-title{
+    color: #858c8b;
+    font-size: 21px;
+  }
+
   .description {
     width: 420px;
     margin: 0 auto;
@@ -421,7 +427,7 @@ section {
   .col-3 {
     padding-top: 20px;
     .item {
-      width: 300px;
+      width: 700px;
       margin-left: 33px;
       position: relative;
       top: 0;
