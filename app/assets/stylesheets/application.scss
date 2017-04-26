@@ -23,98 +23,25 @@
 @import 'bootstrap';
 @import "font-awesome";
 
-$nav-color-gray: #A6A6A6;
-$nav-color-white: #575e6d;
-$nav-color-black: #A6A6A6;
-$nav-background-black: #323436;
-$nav-a-hover: #353637;
-$banner-color: #eae1e1;
+$banner-color: #f4f6f7;
 $btn-color: #fff;
 $btn-background: #29426b;
 $btn-background-hover: #00DBE9;
-$banner: url(https://ww1.sinaimg.cn/large/006tNbRwgy1feupigah02j30nm07vtaf.jpg);
+$banner: url(https://ww3.sinaimg.cn/large/006tNbRwgy1ff0bbplmtij30ow0aathq.jpg);
 
 
 // navbar
-.navbar {
+  .navbar {
   border: none;
 }
-.navbar-default {
-  width: 100%;
-  position: fixed;
-  z-index: 10;
-  top: 0;
-  left: 0;
-  margin-bottom: 10px;//底部 margin 不撑开距离
-  transition: background-color .6s;
-  background: #7abee8; /*背景颜色*/
-  font-size: 30px;
-  &.black {
-    color: $nav-color-gray;
-    background-color: $nav-background-black;
-    // border-bottom: 1px solid #f2f2f5;
-    .navbar-nav > li > a{
-      color: $nav-color-gray;
-      // border: 1px solid #ddd;
-    }
-    .navbar-brand {
-      color: #575e6d;
-      padding: 10px 15px;
-      line-height: 30px;
 
-    }
-  }
-  &.transparent {
-    color: #575e6d;
-    background: linear-gradient(#333,transparent);//背景颜色
-    border-bottom: 0;
-  }
-  .navbar-brand {
-    padding: 10px 120px;//上下10px,左右15px
-    line-height: 30px;//文字行高
-    font-size: 40px;
-    color: #575e6d;
-    &:hover {
-      color:#f7f6f4;
-    }
-  }
-  .navbar-right {
-    // margin-top: 10px;
-    padding-right: 150px;
+  .navbar-default {
+      background-color: #404458;  //背景颜色
 
+      border-color: #212121; //边框色
 
-
+      margin-bottom: 0px; //底部 margin 不撑开距离
   }
-  .navbar-nav > li > a{
-    // width: 80px;
-    // border-radius: 40px;
-    // padding-top: 6px;
-    // padding-bottom: 6px;
-    // text-align: center;
-    // margin-right: 15px;
-    color: $nav-color-white;
-    // border: 1px solid rgb(221, 221, 221);
-    transition: 0.15s linear;
-  }
-  .navbar-nav > li > a:hover,
-  .navbar-nav > li > a:focus {
-    color: #f7f6f4;
-    background-color: none;
-    border-color: $nav-a-hover;
-  }
-  .navbar-nav > .active > a,
-  .navbar-nav > .active > a:hover,
-  .navbar-nav > .active > a:focus {
-    color: $nav-a-hover;
-    background-color: $nav-a-hover;
-  }
-  .navbar-nav > .open > a,
-  .navbar-nav > .open > a:focus,
-  .navbar-nav > .open > a:hover {
-      background: none;
-      color: #fff;
-  }
-}
 
 @media (min-width: 768px) {
   .navbar {
@@ -122,12 +49,56 @@ $banner: url(https://ww1.sinaimg.cn/large/006tNbRwgy1feupigah02j30nm07vtaf.jpg);
   }
 }
 
-.navbar-brand > img {
-  display: inline-block;  //图片和链接文字显示在同一行
-  margin-right: 10px; //图片和链接文字拉开一点距离
-  width: 32px; //定制图片宽度
-  height: 32px; //定制图片高度
-}
+ .navbar-default .navbar-brand {
+    color: #f9f7f4; //字体颜色
+
+    padding: 10px 15px; //上下10px，左右15px
+    line-height: 30px; //文字行高
+  }
+
+  .navbar-default .navbar-brand:hover,
+  .navbar-default .navbar-brand:focus {
+    color:  #ce422d; //鼠标放置在链接上的文字颜色
+
+    background-color: transparent; //鼠标放置在链接上的背景颜色，这里设为透明
+  }
+
+ .navbar-default .navbar-nav > li > a{
+    color: #ffe9e6;
+
+  }
+
+  .navbar-default .navbar-nav > li > a:hover,
+  .navbar-default .navbar-nav > li > a:focus {
+    color:  #ce422d; //鼠标放上去的颜色
+
+    background-color: transparent;
+  }
+  .navbar-default .navbar-nav > .active > a,
+  .navbar-default .navbar-nav > .active > a:hover,
+  .navbar-default .navbar-nav > .active > a:focus {
+    color: #FF6F00;
+
+    background-color: #FFE0B2;
+
+  }
+
+  .navbar-default .navbar-nav > .open > a,
+  .navbar-default .navbar-nav > .open > a:focus,
+  .navbar-default .navbar-nav > .open > a:hover {
+    background-color: #FFE0B2;
+
+    color:  #b58780;
+
+  }
+
+  .navbar-brand > img {
+        display: inline-block; //图片和链接文字显示在同一行
+        margin-right: 10px; //图片和链接文字拉开一点距离
+        width: 32px; //定制图片宽度
+        height: 32px; //定制图片高度
+    }
+
 
 //zhengwen
 body {
@@ -184,47 +155,40 @@ section {
   padding-top: 20px;
   padding-bottom: 85px;
   &.odd {
-    background: #c9e2f2;
+    background: #fffcf8;
+    margin: 0 -15px 0;
   }
 }
 .section-title {
   text-align: center;
   font-size: 34px;
-  color: #858c8b;
+  color: #a8937d;
   line-height: 34px;
 }
 
 // banner
-
-.container-fluid {
-  .jumbotron {
-    padding-bottom: 110px;//内部的底部边距，这样按钮不会很靠近底部了
-    margin: 0 -15px 20px;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-    border-radius: 0;//圆角为0
-    padding-top: 0;
-  }
-}
 .jumbotron {
   background-image: $banner;
   background-repeat: no-repeat;
   background-size: cover;
   padding-bottom: 110px;
-  background-position: center -38px;
+//  background-position: center -38px;
   margin: 0 -15px 0;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
-  color: $banner-color;
+  color: #595d73; //字体颜色
   position: relative;
-  height: 850px;
+  height: 770px;
   letter-spacing: 2px;
-  // filter: blur(.5px);
+
   &::before {
     content: "";
     width: 100%;
     height: 100%;
-  // background-color: transparentize(#000, .55);
+  //  background-color: transparentize(#000, .55);
     position: absolute;
     top: 0;
     left: 0;
   }
+
   .text-content {
     position: absolute;
     z-index: 2;
@@ -234,33 +198,68 @@ section {
     height: 100%;
   }
   .title {
-    text-align: center;//文字左对齐
+    text-align: center;//文字
     padding: 50px 20px 0;//上50px，左右20px，下0
-    font-size: 60px;
+    font-size: 50px;
     font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
-    padding-top: 268px;
-  }
+    text-align: center;
+    padding-top: 40px;
 
+  }
 
 
   .slogan {
-    width: 600px;
-    margin: 40px auto 0;
-    font-size: 30px;
-    line-height: 26px;
-    text-align: center;
-  }
-  .lead {
-    margin-top: 40px;
-    margin-bottom: 230px;
-    text-align: center;
-    font-size: 30px;
-    color: white;
-    .b-btn {
-      padding: 10px 20px;
+      width: 600px;
+      margin: 30px auto 0;
+      font-size: 27px;
+      line-height: 26px;
+      text-align: center;
+    }
+    .lead {
+      margin-top: 40px;
+      margin-bottom: 230px;
+      text-align: center;
+      color: white;
+      .b-btn {
+        padding: 10px 20px;
+      }
     }
   }
-}
+
+  // button
+  .b-btn {
+    width: 150px;
+    color: $btn-color;//字体颜色
+    background-color: #ec644f;//背景颜色
+    border-color: #ec644f;//边框颜色 橙色
+  }
+
+  .b-btn:focus,
+  .b-btn:hover {
+    color: #fff;
+    background-color:#ce422d;//鼠标放置在btn上的背景颜色
+    border-color: #ce422d;//鼠标放置在btn上的边框颜色 深红色
+  }
+
+  .btn-lg, .btn-group-lg > .btn {
+    padding: 8px 14px;//通过padding来决定btn的大小
+    font-size: 17px;//btn文字大小
+    border-radius: 3px;//btn圆角
+  }
+
+  .search-wrap, .content {
+    margin-top: -20px;
+  }
+
+  .btn-success {
+    background: $btn-background;
+    color: #fff;
+    &:hover, &:active {
+      background: $btn-background-hover !important;
+      border-color: $btn-background-hover !important;
+    }
+  }
+
 
 // 招聘进行时品牌
 .hjc-ul {
@@ -308,7 +307,7 @@ section {
 
 }
 
-// home-people
+// 听听他们怎么说
 .home-people {
   .person {
     display: inline-block;
@@ -455,39 +454,6 @@ section {
   }
 }
 
-// button
-.b-btn {
-  width: 220px;
-  color: $btn-color;//字体颜色
-  background-color: $btn-background;//背景颜色
-  border-color: $btn-background;//边框颜色
-}
-
-.b-btn:focus,
-.b-btn:hover {
-  color: #edb534;
-  background-color: $btn-background-hover;//鼠标放置在btn上的背景颜色
-  border-color: $btn-background-hover;//鼠标放置在btn上的边框颜色
-}
-
-.btn-lg, .btn-group-lg > .btn {
-  padding: 8px 16px;//通过padding来决定btn的大小
-  font-size: 16px;//btn文字大小
-  border-radius: 3px;//btn圆角
-}
-
-.search-wrap, .content {
-  margin-top: -20px;
-}
-
-.btn-success {
-  background: $btn-background;
-  color: #fff;
-  &:hover, &:active {
-    background: $btn-background-hover !important;
-    border-color: $btn-background-hover !important;
-  }
-}
 
 // label
 .label {
@@ -535,6 +501,7 @@ section {
     text-align: center;
   }
 }
+
 
 .footer {
   background: #1a191a;
