@@ -1,8 +1,8 @@
 
-<br><br><br>
+<br>
 
-<div class="pull-right">
-  <%= link_to("Add a Job", new_admin_job_path, :class => "btn btn-default" ) %>
+<div class="pull-right table-alter">
+  <%= link_to("新增职位", new_admin_job_path, :class => "btn btn-primary" ) %>
 </div>
 
 
@@ -10,25 +10,23 @@
     <thead>
         <tr>
             <td>
-                职位名称
+              <h2>职位名称</h2>
             </td>
             <td>
-                品牌名称
+              <h2>品牌名称</h2>
             </td>
             <td>
-              收到履历数量
+            <h2>收到履历数量</h2>
             </td>
             <td>
-                薪资下限
+              <h2>薪资情况<h2>
+            </td>
+
+            <td>
+            <h2>管理选项</h2>
             </td>
             <td>
-                薪资上限
-            </td>
-            <td>
-                管理选项
-            </td>
-            <td>
-                刊登时间
+            <h2>刊登时间</h2>
             </td>
         </tr>
     </thead>
@@ -43,8 +41,7 @@
         </td>
         <td> <%= job.brand %></td>
         <td> <%= link_to(job.resumes.count, admin_job_resumes_path(job)) %> </td>
-        <td> <%= job.wage_lower_bound %> </td>
-        <td> <%= job.wage_upper_bound %> </td>
+        <td> <span class="label label-primary"><%= job.wage_lower_bound %>k - <%= job.wage_upper_bound %>k</span> </td>
         <td>
           <%= link_to("Edit", edit_admin_job_path(job), :class => "btn btn-xs btn-info") %>
           <%= link_to("Destroy", admin_job_path(job), :method => :delete, :class => "btn btn-xs btn-danger", :data => { :confirm => "Are you sure?" }) %>
