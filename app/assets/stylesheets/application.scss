@@ -228,7 +228,7 @@ section {
 
   // button
   .b-btn {
-    width: 150px;
+    width: 170px;
     color: $btn-color;//字体颜色
     background-color: #ec644f;//背景颜色
     border-color: #ec644f;//边框颜色 橙色
@@ -242,8 +242,8 @@ section {
   }
 
   .btn-lg, .btn-group-lg > .btn {
-    padding: 8px 14px;//通过padding来决定btn的大小
-    font-size: 17px;//btn文字大小
+    padding: 8px 16px;//通过padding来决定btn的大小
+    font-size: 16px;//btn文字大小
     border-radius: 3px;//btn圆角
   }
 

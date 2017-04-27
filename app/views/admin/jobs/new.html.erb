@@ -1,7 +1,11 @@
 <br><br><br>
-<h1>Add a job</h1>
 
-<%= simple_form_for [:admin,@job] do |f| %>
+<div class="panel panel-primary col-md-9">
+  <div class="panel-heading">
+    <h1 class="panel-title">Add a job</h1>
+  </div>
+  <div class="panel-body">
+    <%= simple_form_for [:admin,@job] do |f| %>
 <%= f.input :title %>
 <%= f.input :description %>
 <%= f.input :wage_lower_bound, :label => "薪资下限" %>
@@ -10,3 +14,5 @@
 <%= f.input :is_hidden %>
 <%= f.submit "Submit" %>
 <% end %>
+  </div>
+</div>
