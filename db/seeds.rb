@@ -8,8 +8,8 @@
 
 puts "建立账号和职位"
 
-#create_account =  User.create([email: 'admin@gmail.com', password: '123456', password_confirmation: '123456', is_admin: 'true'])
-#puts "Admin account created."
+create_account =  User.create([email: 'admin@gmail.com', password: '123456', password_confirmation: '123456', is_admin: 'true'])
+puts "Admin account created."
 
 Job.create!(title:"橱柜设计师",brand:"欧派",description:"设计专业优先",wage_lower_bound: 5000, wage_upper_bound: 12000, location:"世邦二楼",
 contact_email: "admin@gmail.com",is_hidden: false)
