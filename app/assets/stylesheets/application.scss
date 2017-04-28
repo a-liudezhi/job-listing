@@ -28,6 +28,55 @@ $btn-color: #fff;
 $btn-background: #29426b;
 $btn-background-hover: #00DBE9;
 $banner: url(https://ww3.sinaimg.cn/large/006tNbRwgy1ff0bbplmtij30ow0aathq.jpg);
+$db-image:url(https://ww3.sinaimg.cn/large/006tNbRwgy1ff2twkcv74j319y09ualb.jpg);
+
+//首页 世邦字样
+.img-sb {
+background-repeat: no-repeat;
+ margin-top: -15px;
+}
+
+//首页底图
+.base-image {
+  background-image: $db-image;
+  background-repeat: no-repeat;
+  background-size: cover;
+//  padding-bottom: 110px;
+  margin: 0 -15px 0;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
+  position: relative;
+  height: 260px;
+  letter-spacing: 2px;
+
+  &::before {
+    content: "";
+    width: 100%;
+    height: 100%;
+  //  background-color: transparentize(#000, .55);
+    position: absolute;
+    top: 0;
+    left: 0;
+  }
+
+  .text-content {
+    position: absolute;
+    z-index: 2;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+  }
+
+    .lead {
+      margin-top: 110px;
+      margin-bottom: 230px;
+      text-align: center;
+      color: white;
+      .b-btn {
+        padding: 10px 20px;
+      }
+    }
+  }
+
 
 
 // navbar
@@ -232,6 +281,7 @@ section {
     color: $btn-color;//字体颜色
     background-color: #ec644f;//背景颜色
     border-color: #ec644f;//边框颜色 橙色
+   margin: auto;
   }
 
   .b-btn:focus,
@@ -398,11 +448,13 @@ section {
 }
 
 .section-content {
-  width: 1000px;
-  padding-top: 50px;
+//  width: 1000px;
+  padding-top: 35px;
   margin: 0 auto;
   text-align: center;
   line-height: 1.8em;
+  font-family: "Helvetica Neue", "Microsoft Yahei", 微软雅黑;
+}
 
   .title {
     padding: 20px 0 10px;
@@ -415,7 +467,12 @@ section {
   .advantage-title{
     color: #474647;
     font-size: 25px;
+
   }
+
+ .section-title{
+   margin-bottom: 30px;
+ }
 
   .description {
     width: 420px;
@@ -426,15 +483,16 @@ section {
   .col-3 {
     padding-top: 20px;
     .item {
-      width: 700px;
+      width: 450px;
       margin-left: 33px;
+      margin-right: 33px;
       position: relative;
-      top: 0;
+      top: -5px;
       -webkit-transition: all .4s;
       transition: all .4s;
       &:hover {
         position: relative;
-        top: -5px;
+        top: -10px;
       }
       .advantage-img {
         width: 60px;
@@ -444,7 +502,7 @@ section {
       }
       .advantage-title {
         margin-top: 20px;
-        margin-bottom: 10px;
+        margin-bottom: 0px;
         color: #333333;
         font-weight: bold;
         line-height: 24px;
@@ -452,7 +510,6 @@ section {
       }
     }
   }
-}
 
 
 // label
@@ -670,15 +727,12 @@ section {
   padding: 17px 0px;
   font-family: roboto;
   font-size: 14px;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#4787ed)); */
 }
 
 .loginmodal-submit:hover {
-  /* border: 1px solid #2f5bb7; */
   border: 0px;
   text-shadow: 0 1px rgba(0,0,0,0.3);
   background-color: #357ae8;
-  /* background-image: -webkit-gradient(linear, 0 0, 0 100%,   from(#4d90fe), to(#357ae8)); */
 }
 
 .loginmodal-container a {
