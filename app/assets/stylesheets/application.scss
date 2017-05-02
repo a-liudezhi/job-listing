@@ -47,6 +47,7 @@ background-repeat: no-repeat;
   height: 260px;
   letter-spacing: 2px;
 
+
   &::before {
     content: "";
     width: 100%;
@@ -766,3 +767,14 @@ section {
  .table-boldered h2 {
    color:#404458;
  }
+
+//footer
+footer {
+  height: 90px;
+  background-color: #404458;
+  p {
+    padding-top: 20px;
+    padding-bottom: 20px;
+    color: white;
+  }
+}

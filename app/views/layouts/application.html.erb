@@ -9,14 +9,16 @@
   </head>
 
 
-
+   <div class="main" style="margin-bottom: 100px;">
     <div class="container-fluid wraper">
+        <div class="row">
              <%= render "common/flashes" %>
-              <div class="row">
+
                <%= render "common/navbar" %>
              </div>
                <%= yield %>
              </div>
    </div>
     <%= render "common/footer" %>
+
 </html>
