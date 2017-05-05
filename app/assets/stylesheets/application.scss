@@ -30,6 +30,20 @@ $btn-background-hover: #00DBE9;
 $banner: url(https://ww3.sinaimg.cn/large/006tNbRwgy1ff0bbplmtij30ow0aathq.jpg);
 $db-image:url(https://ww3.sinaimg.cn/large/006tNbRwgy1ff2twkcv74j319y09ualb.jpg);
 
+html {
+  position: relative;
+  min-height: 100%;
+}
+
+main{
+   padding-bottom:100px;/* main的padding-bottom值要等于或大于footer的height值 */
+ }
+
+ body {
+   /* Margin bottom by footer height */
+   margin-bottom: 50px;
+ }
+
 //首页 世邦字样
 .img-sb {
 background-repeat: no-repeat;
@@ -41,10 +55,10 @@ background-repeat: no-repeat;
   background-image: $db-image;
   background-repeat: no-repeat;
   background-size: cover;
-//  padding-bottom: 110px;
+  // padding-bottom: 10px;
   margin: 0 -15px 0;//顶部margin为0，因此可以直接接着导航栏；左右margin为负15，因此可以顶到浏览器的边缘（抵消 container-fluid 的 15px 左右padding);底部margin为20，会跟下面的内容撑开距离
   position: relative;
-  height: 260px;
+  height: 290px;
   letter-spacing: 2px;
 
 
@@ -68,8 +82,8 @@ background-repeat: no-repeat;
   }
 
     .lead {
-      margin-top: 110px;
-      margin-bottom: 230px;
+      margin-top: 90px;
+      margin-bottom: 150px;
       text-align: center;
       color: white;
       .b-btn {
@@ -81,6 +95,7 @@ background-repeat: no-repeat;
 
 
 // navbar
+
   .navbar {
   border: none;
 }
@@ -91,6 +106,7 @@ background-repeat: no-repeat;
       border-color: #212121; //边框色
 
       margin-bottom: 0px; //底部 margin 不撑开距离
+
   }
 
 @media (min-width: 768px) {
@@ -102,7 +118,7 @@ background-repeat: no-repeat;
  .navbar-default .navbar-brand {
     color: #f9f7f4; //字体颜色
 
-    padding: 10px 15px; //上下10px，左右15px
+    padding: 10px 25px; //上下10px，左右15px
     line-height: 30px; //文字行高
   }
 
@@ -115,6 +131,9 @@ background-repeat: no-repeat;
 
  .navbar-default .navbar-nav > li > a{
     color: #ffe9e6;
+    padding-right: 20px;
+    margin-right: 20px;
+
 
   }
 
@@ -140,11 +159,13 @@ background-repeat: no-repeat;
 
     color:  #b58780;
 
+
   }
 
   .navbar-brand > img {
         display: inline-block; //图片和链接文字显示在同一行
         margin-right: 10px; //图片和链接文字拉开一点距离
+        margin-top: -3px;
         width: 32px; //定制图片宽度
         height: 32px; //定制图片高度
     }
@@ -217,6 +238,13 @@ section {
 }
 
 // banner
+.container-fluid {
+  .jumbotron {
+    border-radius: 0;//圆角为0
+    padding-top: 0;
+  }
+}
+
 .jumbotron {
   background-image: $banner;
   background-repeat: no-repeat;
@@ -256,7 +284,6 @@ section {
     padding-top: 40px;
 
   }
-
 
   .slogan {
       width: 600px;
@@ -561,19 +588,19 @@ section {
 }
 
 
-.footer {
-  background: #1a191a;
-  padding: 16px 10px 6px;
-  text-align: center;
-  font-size: 18px;
-  color: #666;
-  span {
-    display: inline-block;
-    margin-right: 10px;
-    height: 24px;
-    line-height: 23px;
-  }
-}
+// .footer {
+//   background: #1a191a;
+//   padding: 16px 10px 6px;
+//   text-align: center;
+//   font-size: 18px;
+//   color: #666;
+//   span {
+//     display: inline-block;
+//     margin-right: 10px;
+//     height: 24px;
+//     line-height: 23px;
+//   }
+// }
 
 .wrapper-container {
   min-height: 653px;
@@ -769,12 +796,43 @@ section {
  }
 
 //footer
-footer {
-  height: 90px;
-  background-color: #404458;
-  p {
-    padding-top: 20px;
-    padding-bottom: 20px;
-    color: white;
-  }
+.footer {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    /* Set the fixed height of the footer here */
+    height: 100px;
+    background-color: #404458;
+
+    p {
+        color: white;
+        margin-top: 25px;
+    }
 }
+
+
+
+//search
+.search-info-title {
+  font-family: PingFangSC-Medium, Arial, Helvetica, sans-serif;
+  color: #0d6ded;
+  font-size: 20px;
+  text-align: center;
+}
+
+.search-id {
+  width: 220px;
+  height: 50px;
+  padding-top: 8px;
+  margin-left: 40px;
+}
+
+.input-group-btn {
+   padding-bottom: 8px;
+}
+
+ .form-control {
+   height: 33px;
+
+
+ }

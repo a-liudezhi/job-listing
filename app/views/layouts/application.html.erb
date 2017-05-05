@@ -8,17 +8,18 @@
     <%= javascript_include_tag 'application', 'data-turbolinks-track': 'reload' %>
   </head>
 
-
-   <div class="main" style="margin-bottom: 100px;">
-    <div class="container-fluid wraper">
+   <body>
+   <!-- <div class="main" style="margin-bottom: 100px;"> -->
+    <div class="container-fluid main">
         <div class="row">
-             <%= render "common/flashes" %>
+              <%= render "common/flashes" %>
 
                <%= render "common/navbar" %>
-             </div>
+          </div>
                <%= yield %>
-             </div>
-   </div>
-    <%= render "common/footer" %>
 
+       </div>
+
+    <%= render "common/footer" %>
+ </body>
 </html>
