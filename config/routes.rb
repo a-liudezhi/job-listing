@@ -19,6 +19,12 @@ end
     resources :resumes
   end
 
+  resources :welcome do
+    member do
+      get :about
+    end
+  end
+
 root 'welcome#index'
 
 
